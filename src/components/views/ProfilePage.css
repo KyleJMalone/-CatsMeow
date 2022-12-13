@@ -1,0 +1,17 @@
+h3 {
+  color: black;
+  font-size: xx-large;
+  text-align: center;
+  background-color: white;
+  border: grey solid;
+ 
+
+}
+.userProfile {
+    display: block;
+    text-indent: 2px;
+    border: solid grey;
+    background-color: white;
+    color: black;
+
+}

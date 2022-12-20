@@ -1,17 +1,43 @@
 h3 {
+  text-align: center;
+  display: block;
+  justify-content: center;
   color: black;
   font-size: xx-large;
-  text-align: center;
-  background-color: white;
-  border: grey solid;
+  background-color: #D9D9D9;
+  border: 5px grey solid;
+  font-family: monospace;
  
 
 }
 .userProfile {
-    display: block;
+  text-align: center;
+    display: flex;
+    justify-content: center;
     text-indent: 2px;
-    border: solid grey;
-    background-color: white;
+    border: 19px solid grey;
+    background-color: #D9D9D9;
     color: black;
+    text-align: center;
+    font-size: larger;
+    font-family: monospace;
 
+}
+.comment_edit {
+  background-color: darkgrey;
+  display: flex;
+ font-family: monospace;
+ justify-content: flex-start;
+}
+.comment_delete {
+  background-color: darkgray;
+  display: flex;
+  font-family:monospace;
+  justify-content: flex-end;
+}
+.comment_addcat{
+  background-color: darkgray;
+  display: flex;
+  font-family:monospace;
+  justify-content: flex-end;
 }

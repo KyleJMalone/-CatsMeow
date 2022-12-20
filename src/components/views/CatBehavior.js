@@ -1,11 +1,12 @@
 import {useEffect, useState } from "react"
 import "./CatBehavior.css"
+import cat from "./cat.jpg"
 
 
 export const CatBehaviorForm = () => {
      const [catBehavior,setCatBehavior] = useState ({
      })
-     
+  
   
 
      useEffect (
@@ -22,6 +23,8 @@ export const CatBehaviorForm = () => {
      )
 
 
+
+
      return<>
 
      <h2>Cat Behavior</h2>
@@ -33,7 +36,9 @@ export const CatBehaviorForm = () => {
               <header>{catBehavior.name}</header>
               <div>{catBehavior.description}</div>
               <div>{catBehavior.date}</div>
-              <div>{catBehavior.img}</div>
+              <div className="catpic">
+        <img src={cat} alt="catpic"/>
+      </div>
             </section>
           
         

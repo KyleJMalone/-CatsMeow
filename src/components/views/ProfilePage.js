@@ -13,12 +13,18 @@ export const ProfileForm = () => {
     userName: "",
     aboutMe: "",
   });
+  const [userCat, setUserCat] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:8088/users/${projectUserObject.id}`)
       .then((response) => response.json())
       .then((profileArray) => {
         setUserProfile(profileArray);
+      });
+    fetch(`http://localhost:8088/cats?userId=${projectUserObject.id}`)
+      .then((response) => response.json())
+      .then((CatsArray) => {
+        setUserCat(CatsArray);
       });
   }, []);
 
@@ -28,10 +34,12 @@ export const ProfileForm = () => {
 
   return (
     <>
-      <h3>Welcome</h3>
+      <h3>Welcome, {userProfile.name }</h3>
 
       <article className="userProfile">
         <section key={userProfile.id} className="profile">
+        <h2>Profile Picture</h2>
+          <div>{userProfile.profilePicture}</div>
           <h2>Name:</h2>
           <header>{userProfile.name}</header>
           <h2>Email:</h2>
@@ -40,6 +48,27 @@ export const ProfileForm = () => {
           <div>{userProfile.userName}</div>
           <h2>About Me:</h2>
           <div>{userProfile.aboutMe}</div>
+         
+          
+
+
+          {userCat.map((cat) => {
+            return (
+              <section key={cat.id} className="cat">
+                <h2>Cats:</h2>
+                <div>{cat.name}</div>
+                <h2>Breed:</h2>
+                <div>{cat.breed}</div>
+                <h2>Sex:</h2>
+                <div>{cat.sex}</div>
+                <h2>Age:</h2>
+                <div>{cat.age}</div>
+                <h2>Color</h2>
+                <div>{cat.color}</div>
+              </section>
+            );
+          })}
+          <div>{userCat.cats}</div>
           <header></header>
         </section>
         <section>
@@ -64,7 +93,7 @@ export const ProfileForm = () => {
         </section>
         <section>
           <button
-            className="btn comment_delete"
+            className="btn comment_addcat"
             onClick={() => {
               navigate(`/AddACat/${userProfile.id}`);
             }}

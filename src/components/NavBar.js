@@ -1,14 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import Meow from "./images/Meow.png"
 import "./NavBar.css";
+
 
 export const NavBar = () => {
   const navigate = useNavigate();
   const localUser = localStorage.getItem("capstone_user");
   const userObject = JSON.parse(localUser);
 
+
+  
+
+ 
+
   return (
     <ul className="navbar">
-      <span className= "navbar_logo">CatsMeow</span>
       <li className="navbar__item active">
         <Link className="navbar__link" to="/">
           Home
@@ -24,6 +30,9 @@ export const NavBar = () => {
           Profile Page
         </Link>
       </li>
+      <div className="logo">
+        <img src={Meow} alt="logo"/>
+      </div>
       <li className="navbar__item active">
         <Link className="navbar__link" to="/CatBehavior">
           Cat Behavior
@@ -53,3 +62,4 @@ export const NavBar = () => {
     </ul>
   );
 };
+

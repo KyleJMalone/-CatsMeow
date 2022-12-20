@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+// import CatBackground from "./CatBackground.jpg"
 import "./Login.css";
+
 
 export const Login = () => {
   const [email, set] = useState("");
@@ -46,6 +48,9 @@ export const Login = () => {
               required
               autoFocus
             />
+             {/* <div className="cat">
+        <img src={CatBackground} alt=""/>
+      </div> */}
           </fieldset>
           <fieldset>
             <button type="submit">Sign in</button>

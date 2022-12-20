@@ -1,10 +1,6 @@
 body {
   background-color: black;
 }
-h1 {
-  color: #fff;
-  font-size: 2.5rem;
-}
 
 fieldset {
   min-width: 0;
@@ -18,7 +14,12 @@ fieldset {
   display: inline-block;
   margin: 0 auto;
   text-align: left;
+  color: white;
+  font-size: xx-large;
+  font-family: monospace;
 }
+
+
 
 .form--login > fieldset > input[type="email"] {
   width: 25em;
@@ -40,7 +41,7 @@ fieldset {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 2px solid black;
   border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
@@ -65,4 +66,9 @@ fieldset {
 .button--close {
   position: relative;
   bottom: -2rem;
+}
+button {
+  background-color: #495057;
+  font-family: monospace;
+  font-size: large;
 }

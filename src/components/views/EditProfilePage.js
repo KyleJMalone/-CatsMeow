@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./EditProfilePage.css";
+import "./ProfilePage";
 
 export const EditProfilePage = () => {
   const localProjectUser = localStorage.getItem("capstone_user");
@@ -37,7 +37,7 @@ export const EditProfilePage = () => {
         },
         body: JSON.stringify(user),
       };
-      const response = await (`http://localhost:8088/users/${user.id}`,
+      const response = await fetch (`http://localhost:8088/users/${user.id}`,
       options);
       await response.json();
     };

@@ -1,0 +1,10 @@
+.CommentSection {
+    display: block;
+    text-indent: 2px;
+    background-color:#D9D9D9;
+    border: 19px solid grey;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+
+}   

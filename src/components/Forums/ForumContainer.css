@@ -1,0 +1,20 @@
+.post {
+    display: block;
+    justify-content: center;
+    text-indent: 2px;
+   background-color: #D9D9D9;
+   border: solid grey;
+   font-family: monospace;
+   font-size: larger;
+}
+
+.userComments {
+    display: block;
+    text-indent: 2px;
+    background-color:#D9D9D9;
+    border: 5px solid grey;
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+    font-size: larger;
+}
